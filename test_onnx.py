@@ -19,7 +19,7 @@ def test_model_onnx(onnx_model_path : str, image_paths : list, labels : list):
 
         assert prediction == label
     
-    print("Testing complete")
+    print("Testing complete successfully")
 
 image_paths = ["n01440764_tench.jpeg", "n01667114_mud_turtle.JPEG"]
 labels = [0, 35]
