@@ -10,6 +10,10 @@ RUN pip3 install --upgrade pip
 ADD requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
+COPY scripts /app/scripts
+COPY models /app/models
+COPY images /app/images
+
 ADD server.py .
 ADD app.py .
 
