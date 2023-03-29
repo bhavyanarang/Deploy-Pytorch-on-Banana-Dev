@@ -40,5 +40,3 @@ class preprocessInput:
 
     def getProcImage(self):
         return self.preprocessed_image
-
-model = ONNXModel("model.onnx")

@@ -21,10 +21,10 @@ def test_model_onnx(onnx_model_path : str, image_paths : list, labels : list):
     
     print("Testing complete successfully")
 
-image_paths = ["n01440764_tench.jpeg", "n01667114_mud_turtle.JPEG"]
+image_paths = ["images/n01440764_tench.jpeg", "images/n01667114_mud_turtle.JPEG"]
 labels = [0, 35]
 
-test_model_onnx(onnx_model_path="model.onnx", image_paths = image_paths, labels=labels)
+test_model_onnx(onnx_model_path="models/model.onnx", image_paths = image_paths, labels=labels)
 
 
 

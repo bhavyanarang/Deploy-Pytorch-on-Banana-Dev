@@ -24,4 +24,4 @@ def convert_model_to_onnx(model_path : str, output_path : str):
 
     print("Conversion done")
 
-convert_model_to_onnx("pytorch_model_weights.pth", "model.onnx")
+convert_model_to_onnx("models/pytorch_model_weights.pth", "models/model.onnx")
