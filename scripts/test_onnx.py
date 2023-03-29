@@ -21,10 +21,18 @@ def test_model_onnx(onnx_model_path : str, image_paths : list, labels : list):
     
     print("Testing complete successfully")
 
-image_paths = ["images/n01440764_tench.jpeg", "images/n01667114_mud_turtle.JPEG"]
-labels = [0, 35]
+def test_deployed_model(onnx_model, image_paths : list, labels : list):
 
-test_model_onnx(onnx_model_path="models/model.onnx", image_paths = image_paths, labels=labels)
+    assert len(image_paths) == len(labels)
+
+    for idx in range(len(image_paths)):
+
+        label = labels[idx]
+        prediction = onnx_model.predict(image_paths[idx])
+
+        assert prediction == label
+    
+    print("Deployed model testing complete successfully")
 
 
 
